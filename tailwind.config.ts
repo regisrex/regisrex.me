@@ -11,6 +11,10 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        brand : {
+          DEFAULT : "#A3A9A2"
+        }
+
       },
     },
   },
