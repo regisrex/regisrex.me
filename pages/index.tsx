@@ -26,7 +26,7 @@ export default function Home() {
           I&apos;m a software developer who loves building solutions with seamless experience.
         </p>
         <p className="my-4">
-          I'm passionate about building products that make a difference in the
+          I&apos;m passionate about building products that make a difference in the
           world like web applications, APIs, CLIs,
       pipelines, and more other good stuff.
         </p>
