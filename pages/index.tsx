@@ -23,12 +23,12 @@ export default function Home() {
         </div>
 
         <p className="my-4">
-          I'm a software developer who loves building solutions with seamless experience.
+          I&apos;m a software developer who loves building solutions with seamless experience.
         </p>
         <p className="my-4">
           I'm passionate about building products that make a difference in the
           world like web applications, APIs, CLIs,
-          Pipelines, and more other good stuff.
+      pipelines, and more other good stuff.
         </p>
 
         <p className="mb-4">
@@ -36,7 +36,7 @@ export default function Home() {
         </p>
 
         <p className="mb-4">
-          I'm also a fan of open-source and I contribute to some projects on GitHub. If you have a idea in mind, feel free to reach out to me. Have a good day!
+          I&apos;m also a fan of open-source and I contribute to some projects on GitHub. If you have a idea in mind, feel free to reach out to me. Have a good day!
         </p>
 
         <div className="my-4 flex gap-4">
