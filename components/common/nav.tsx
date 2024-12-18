@@ -4,26 +4,24 @@ import { Inter } from "next/font/google";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { GithubIcon, TwitterIcon } from "../icons";
-import { IconLink } from "./icon-link";
 const inter = Inter({ subsets: ['latin'] })
 const navLinks = [
   {
     title: "home",
     href: "/",
   },
-  {
-    title: "work",
-    href: "/work",
-  },
+  // {
+  //   title: "work",
+  //   href: "/work",
+  // },
   {
     title: "blog",
     href: "/blog",
   },
-  {
-    title: "me",
-    href: "/about",
-  },
+  // {
+  //   title: "me",
+  //   href: "/about",
+  // },
 ];
 
 export default function Nav() {
@@ -50,12 +48,16 @@ export default function Nav() {
     else return path.includes(selected.href);
   };
   return (
-    <Pad className="grid grid-cols-3 items-center justify-between border-b border-bluish-100/10 py-4 sticky top-0 z-50 bg-black/60 backdrop-blur-md">
+    <Pad className="flex items-center justify-between  py-4 sticky top-0 z-50  backdrop-blur-md">
 
+      <span className="font-bold tracking-widest text-white" style={inter.style}>
+        R&eacute;gis N.
+      </span>
 
-      <ul className="flex items-center gap-2 justify-start">
+      <ul className="flex items-center  gap-2 justify-start w-fit">
+
         {/* <span className="font-black text-yellow-400 mr-6" style={inter.style}>Regis N.</span> */}
-        {navLinks.map((link, i) => (
+      {navLinks.map((link, i) => (
           <li key={i}>
             <Link
               href={link.href}
@@ -75,17 +77,15 @@ export default function Nav() {
           </li>
         ))}
       </ul>
-      <span className="font-bold tracking-widest text-transparent bg-clip-text  bg-gradient-to-br from-blue-500 via-gray-500 to-red-500 opacity-70  text-center w-ful l" style={inter.style}>
-        - Regis NDIZIHIWE -
-      </span>
-      <div className="flex  gap-2 items-center justify-end">
+
+      {/* <div className="flex  gap-2 items-center justify-end">
         <IconLink href="https://github.com/regisrex">
           <GithubIcon />
         </IconLink>
         <IconLink href="https://x.com/regissrex">
           <TwitterIcon />
         </IconLink>
-      </div>
+      </div> */}
     </Pad >
   );
 }

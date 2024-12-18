@@ -1,5 +1,6 @@
 @import url('https://fonts.cdnfonts.com/css/general-sans');
 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -81,4 +82,9 @@ code {
     opacity: 1;
     transform: translateY(0%);
   }
+}
+
+
+*{
+  font-size: 99%;
 }
