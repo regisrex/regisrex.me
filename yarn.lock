@@ -479,10 +479,10 @@
   dependencies:
     glob "7.1.7"
 
-"@next/mdx@^13.5.4":
-  version "13.5.4"
-  resolved "https://registry.npmjs.org/@next/mdx/-/mdx-13.5.4.tgz"
-  integrity sha512-WYdWeDZUvX9h0BnjDtwyFy2We4ko8ox5EuglN27rCoYz1xj8fQ8KAn7reZgXwT2RX2hxUOl4eTNbXBfsrw7Gew==
+"@next/mdx@^14.2.4":
+  version "14.2.4"
+  resolved "https://registry.yarnpkg.com/@next/mdx/-/mdx-14.2.4.tgz#a15ba763f363a5f5b79c1dff0fa742a13bd80cfe"
+  integrity sha512-eklTNNoH08xGy9UiKcohZmoLhmHAYaYm5ndPGQqJybaeNErgYL8fmp2tk5DRD0L54DNqMz97oN+CAEHqfqIVcw==
   dependencies:
     source-map "^0.7.0"
 
