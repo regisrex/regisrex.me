@@ -88,3 +88,15 @@ code {
 *{
   font-size: 99%;
 }
+
+/* Subtle site-wide grain and soft gradients */
+.site-bg {
+  background-color: #0a0a0a;
+  background-image:
+    radial-gradient(800px 400px at 80% -10%, rgba(59, 130, 246, 0.10), transparent 60%),
+    radial-gradient(800px 400px at 0% 110%, rgba(249, 115, 22, 0.08), transparent 60%),
+    url('./assets/gggrain.svg');
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-size: auto, auto, 160px;
+  background-attachment: fixed, fixed, fixed;
+}
