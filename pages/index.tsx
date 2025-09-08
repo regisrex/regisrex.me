@@ -1,58 +1,71 @@
-import { Rakkas } from "next/font/google";
-const libre = Rakkas({ subsets: ['latin'], weight: '400' })
+import Link from "next/link";
+import { GithubIcon, TwitterIcon } from "@/components/icons";
+import { works as allWorks } from "@/content/works";
+import blogs from "@/content/content";
+import Work from "@/components/works/work";
+import Blog from "@/components/blogs/blog";
+
 export default function Home() {
+  const featuredWorks = allWorks.slice(0, 3);
+  const latestBlogs = blogs.slice(0, 3);
+
   return (
     <>
-      <div className="text-bluish-200 pt-6 flex  flex-col gap-1 min-h-[80vh]">
-        <div className="flex items-center gap-4 justify-between">
-
-          {/* <p className="text-bluish-100 text-4xl font-black">R&eacute;gis N.</p> */}
-          {/* <p className="text-bluish-100 text-4xl font-black"
-         style={libre.style}
-          >
-            Hey👋! I&apos;m Regis,
-          </p> */}
-          {/* <img
-            src={MeImg.src}
-            alt=""
-            width={60}
-            height={60}
-            className="object-cover w-[100px] h-[100px] rounded-full border border-white/20 ring-4 ring-white/5"
-            draggable={false}
-          /> */}
+      {/* Hero */}
+      <section className="text-bluish-200 pt-10 flex flex-col gap-6 min-h-[60vh]">
+        <div className="flex flex-col gap-3">
+          <h1 className="text-bluish-100 font-bold text-4xl sm:text-5xl leading-tight">
+            Hey, I&apos;m <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">Regis</span>.
+          </h1>
+          <p className="text-bluish-200 max-w-[60ch]">
+            Software engineer crafting fast, thoughtful experiences across web apps, APIs, and CLI tools. I like building products end‑to‑end and writing about the lessons along the way.
+          </p>
+          <div className="flex items-center gap-3 pt-2">
+            <Link href="#work" className="py-2 px-5 rounded-full bg-white/5 border border-white/10 text-bluish-100 hover:bg-white/10">
+              View work
+            </Link>
+            <Link href="#blog" className="py-2 px-5 rounded-full border border-white/10 text-bluish-200 hover:text-bluish-100">
+              Read blog
+            </Link>
+            <a href="https://github.com/regisrex" aria-label="GitHub" className="ml-1 text-bluish-200 hover:text-bluish-100">
+              <GithubIcon />
+            </a>
+            <a href="https://x.com/regissrex" aria-label="Twitter" className="text-bluish-200 hover:text-bluish-100">
+              <TwitterIcon />
+            </a>
+          </div>
         </div>
+      </section>
 
-        <p className="my-4">
-          I&apos;m a software developer who loves building solutions with seamless experience.
-        </p>
-        <p className="my-4">
-          I&apos;m passionate about building products that make a difference in the
-          world like web applications, APIs, CLIs,
-      pipelines, and more other good stuff.
-        </p>
-
-        <p className="mb-4">
-          I am currently working as a software engineer at ScriptyLabs Inc. where I work on building a  .rw registrar and hosting SaaS.
-        </p>
-
-        <p className="mb-4">
-          I&apos;m also a fan of open-source and I contribute to some projects on GitHub. If you have a idea in mind, feel free to reach out to me. Have a good day!
-        </p>
-
-        <div className="my-4 flex gap-4">
-          <a href="https://github.com/regisrex">
-            <button className="py-2 px-6  border border-bluish-200/10   rounded-full  text-bluish-200">
-              Github
-            </button>
-          </a>
-          <a href="https://linkedin.com/in/regisndizihiwe">
-
-            <button className="py-2 px-6 border border-bluish-200/10  rounded-full text-bluish-200">
-              LinkedIn
-            </button>
-          </a>
+      {/* Featured Work */}
+      <section id="work" className="mt-10">
+        <h2 className="text-bluish-100 text-2xl font-semibold mb-4">Selected work</h2>
+        <div className="grid gap-4 md:grid-cols-2">
+          {featuredWorks.map((w, i) => (
+            <Work key={i} {...w} />
+          ))}
         </div>
-      </div>
+        <div className="mt-4">
+          <Link href="/work" className="text-sm text-bluish-200 hover:text-bluish-100 underline underline-offset-4">
+            See all work →
+          </Link>
+        </div>
+      </section>
+
+      {/* Latest Articles */}
+      <section id="blog" className="mt-12">
+        <h2 className="text-bluish-100 text-2xl font-semibold mb-2">Latest articles</h2>
+        <div className="flex flex-col">
+          {latestBlogs.map((b, i) => (
+            <Blog key={i} {...b} />
+          ))}
+        </div>
+        <div className="mt-2">
+          <Link href="/blog" className="text-sm text-bluish-200 hover:text-bluish-100 underline underline-offset-4">
+            Browse all articles →
+          </Link>
+        </div>
+      </section>
     </>
   );
 }

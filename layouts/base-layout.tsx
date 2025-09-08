@@ -4,7 +4,7 @@ import Pad from "./pad";
 export default function BaseLayout({ children }: any) {
   return (
     <div
-      className="flex flex-col bg-blur-md  bg-neutral-950 gap-4 w-full  min-h-screen color-bluish-200   font-medium scrollbar-w-0px leading-7   flex flex-col gap-4   bg-top bg-cover bg-center bg-fixed"
+      className="flex flex-col bg-blur-md site-bg gap-4 w-full  min-h-screen color-bluish-200   font-medium scrollbar-w-0px leading-7   flex flex-col gap-4   bg-top bg-cover bg-center bg-fixed"
       style={{
         // backgroundImage: `url(${BBg.src})`,
         backgroundSize: "cover",
